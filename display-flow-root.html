@@ -5,17 +5,20 @@
     <meta name="author" content="Savin Vladislav">
     <meta name="description" content="Краткое описание страницы"/>
     <meta name="keywords" content="ключевое слово 1, ключевое слово 2, ключевое слово 3">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, user-scalable=no"/>
     <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
     <link rel="stylesheet" href="assets/styles/main.css" title="base styles">
+    <link rel="stylesheet" href="assets/styles/container.css" title="base styles">
     <title>Clearfix</title>
 </head>
 <body>
 <header>
-    <h1>Tags</h1>
-    <button id="theme-changer" onclick="toggleTheme()">toggle theme</button>
+   <div class="container">
+       <h1>Tags</h1>
+       <button id="theme-changer" onclick="toggleTheme()">toggle theme</button>
+   </div>
 </header>
-<div class="container">
+<div class="container block">
     <img src="https://picsum.photos/200/300" alt="my image" class="float-right" height="100px" width="100px"/>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores fugit,
@@ -61,11 +64,11 @@
         display: table;
     }
 
-    .container {
+    .block {
         padding: 16px;
         margin-top: 20px;
         display: flow-root;
-        border: 5px solid green;
+        border: 5px solid var(--header-border-color);
     }
 
     .float-right {

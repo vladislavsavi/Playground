@@ -20,18 +20,25 @@
     background-color: var(--body-background-color);
 }
 
+:root, body {
+    min-width: 320px;
+}
+
 body {
     margin: 0;
     padding: 0;
 }
 
 header {
+    background-color: var(--header-background-color);
+    border-bottom: 1px solid var(--header-border-color);
+    padding: 8px 0;
+}
+
+header > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--header-background-color);
-    border-bottom: 1px solid var(--header-border-color);
-    padding: 8px 16px;
 }
 
 header h1 {

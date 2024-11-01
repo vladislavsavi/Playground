@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Savin Vladislav">
+    <meta name="description" content="Краткое описание страницы"/>
+    <meta name="keywords" content="ключевое слово 1, ключевое слово 2, ключевое слово 3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.2, user-scalable=no"/>
+    <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/container.css">
+    <title>Перенос длинного слова</title>
+    <style media="all and (min-width: 1000px)">
+        .hidden-paragraph {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+   <div class="container">
+       <h1>Перенос длинного слова</h1>
+       <button id="theme-changer" onclick="toggleTheme()">toggle theme</button>
+   </div>
+</header>
+<main class="container">
+    <section>
+        <h2>Разница между элементами &lt;wbr&gt; и &amp;shy; в HTML</h2>
+        <p>
+            Элементы <code>&lt;wbr&gt;</code> и <code>&amp;shy;</code> в HTML используются для управления переносом
+            текста на новые строки. <code>&amp;shy;</code> (мягкий перенос) добавляет дефис при разрыве слова, указывая,
+            где слово можно перенести. В то же время <code>&lt;wbr&gt;</code> создает точку разрыва строки без видимого
+            дефиса, позволяя браузеру переносить слово, когда это необходимо. Использование каждого из них зависит от того, нужен ли визуальный дефис при переносе текста.
+        </p>
+    </section>
+
+    <section>
+        <h2>С <code>&amp;shy;</code></h2>
+        <p>ОЧЕНЬБОЛЬШОЕСЛОВО&shy;ОЧЕНЬБОЛЬШОЕСЛОВО&shy;ОЧЕНЬБОЛЬШОЕСЛОВО&shy;ОЧЕНЬБОЛЬШОЕСЛОВО&shy;ОЧЕНЬБОЛЬШОЕСЛОВО&shy;ОЧЕНЬБОЛЬШОЕСЛОВО</p>
+    </section>
+
+    <section>
+        <h2>С <code>&lt;WBR&gt;</code></h2>
+        <p>ОЧЕНЬБОЛЬШОЕСЛОВО<wbr>ОЧЕНЬБОЛЬШОЕСЛОВО<wbr>ОЧЕНЬБОЛЬШОЕСЛОВО<wbr>ОЧЕНЬБОЛЬШОЕСЛОВО<wbr>ОЧЕНЬБОЛЬШОЕСЛОВО<wbr>ОЧЕНЬБОЛЬШОЕСЛОВО</p>
+    </section>
+</main>
+</body>
+<script src="./assets/scripts/main.js"></script>
+</html>

@@ -11,6 +11,25 @@
 	<link rel="stylesheet" href="../../../assets/styles/container.css">
 	<script defer src="../../../assets/scripts/main.js"></script>
 	<title>Что такое семантика?</title>
+	<style>
+		code {
+			background-color: var(--header-background-color);
+			border: 1px solid var(--header-border-color);
+			padding: 4px;
+			border-radius: 4px;
+		}
+		
+		section {
+			margin-top: 24px;
+		}
+		
+		article {
+			background-color: var(--header-background-color);
+			border: 1px solid var(--header-border-color);
+			padding: 16px;
+			border-radius: 8px;
+		}
+	</style>
 </head>
 <body>
 <header class="page-header">
@@ -20,18 +39,62 @@
 	</div>
 </header>
 <main class="container">
-	<p>Более подробно смотри на <a href="https://doka.guide/html/semantics/" target="_blank">Doka.guide</a></p>
-	
-	<article>
-		<header>
-			<h2>Мой самый первый блог пост</h2>
-			<p>3 дня назад</p>
-		</header>
-		<p>Сегодня я начал изучать вёрстку. Это очень увлекательно.</p>
-		<footer>
-			<a href="?comments=1">Все комментарии</a>
-		</footer>
-	</article>
+	<address style="margin-top: 24px">Более подробно смотри на
+		<a href="https://doka.guide/html/semantics/"
+		   target="_blank">
+			Doka.guide
+		</a>
+	</address>
+	<section>
+		<h2><code>&lt;header/&gt;</code></h2>
+		<div style="display: flex; gap: 16px;">
+			<article>
+				<header>
+					<h2>Мой самый первый блог пост</h2>
+					<p>3 дня назад</p>
+				</header>
+				<p>Сегодня я начал изучать вёрстку. Это очень увлекательно.</p>
+				<footer>
+					<a href="?comments=1">Все комментарии</a>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h2>Мой второй самый первый блог пост</h2>
+					<p>3 дня назад</p>
+				</header>
+				<p>Сегодня я начал изучать вёрстку. Это очень увлекательно.</p>
+				<footer>
+					<a href="?comments=1">Все комментарии</a>
+				</footer>
+			</article>
+		</div>
+		<p>
+			Каждый секционный элемент (<code>&lt;article/&gt;</code>,
+			<code>&lt;aside/&gt;</code>,<code>&lt;nav/&gt;</code>, <code>&lt;section/&gt;</code>) может содержать
+			элемент <code>&lt;header/&gt;</code>. Этот семантичный тег отделяет часть контента, которая напрямую связана
+			с основным контентом секционного блока, но сама по себе не является основным контентом этого блока.
+		</p>
+		
+		<p>Классический пример — «шапка» сайта. В «шапке» может находиться навигация, лого, поисковая строка и так
+			далее. Это содержимое страницы сайта только «обслуживает» основное, но не является основной темой
+			страницы.</p>
+		
+		<p>Ещё масштаб меньше — карточка товара
+			<code>&lt;article/&gt;</code>. Тоже может иметь свой
+			<code>&lt;header/&gt;</code>. В нём можно разместить любую информацию, которая будет связана с самим
+			товаром, но не будет
+			основной. Например, количество доступных товаров или иконка «Акция». Иконка «Акция» связана с товаром,
+			но не основное содержимое карточки. Основной контент тут — фото и описание товара.</p>
+		
+		<p>Важно не связывать<code>&lt;header/&gt;</code> только с «шапкой» сайта. Это семантичный тег, который отделяет
+			основной контент секции от неосновного. В вёрстке он может располагаться в любом месте секционного блока, а
+			не обязательно сверху. Лучше воспринимать <code>&lt;header/&gt;</code> как типографский колонтитул.</p>
+		
+		<p>На странице может быть сколько угодно тегов <code>&lt;header/&gt;</code>. Но их нельзя помещать в контейнеры
+			<code>&lt;footer/&gt;</code>, <code>&lt;address/&gt;</code> или другой <code>&lt;header/&gt;</code>.</p>
+		<p>У <code>&lt;header/&gt;</code> блочные стили по умолчанию</p>
+	</section>
 </main>
 </body>
 </html>

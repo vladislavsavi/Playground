@@ -29,13 +29,13 @@ body {
     padding: 0;
 }
 
-header {
+.page-header {
     background-color: var(--header-background-color);
     border-bottom: 1px solid var(--header-border-color);
     padding: 8px 0;
 }
 
-header > div {
+.page-header > div {
     display: flex;
     align-items: center;
     justify-content: space-between;

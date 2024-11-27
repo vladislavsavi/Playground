@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Savin Vladislav">
+	<meta name="description" content="Краткое описание страницы"/>
+	<meta name="keywords" content="ключевое слово 1, ключевое слово 2, ключевое слово 3">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.2, user-scalable=no"/>
+	<link rel="shortcut icon" type="image/svg+xml" href="../../../assets/images/favicon.svg"/>
+	<link rel="stylesheet" href="../../../assets/styles/main.css">
+	<link rel="stylesheet" href="../../../assets/styles/container.css">
+	<script defer src="../../../assets/scripts/main.js"></script>
+	<title>Что такое семантика? aside</title>
+	<style>
+		header {
+			position: sticky;
+			top: 0;
+		}
+		code {
+			background-color: var(--main-background-color);
+			border: 1px solid var(--border-color);
+			padding: 4px;
+			border-radius: 4px;
+		}
+		
+		section {
+			margin-top: 48px;
+			border-bottom: 3px solid var(--border-color);
+		}
+		
+		article {
+			background-color: var(--main-background-color);
+			border: 1px solid var(--border-color);
+			padding: 16px;
+			border-radius: 8px;
+		}
+		.nav-links-container {
+			display: inline-flex;
+			gap: 8px;
+		}
+		
+		h2 {
+			font-size: 48px;
+		}
+		
+		p {
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+<header class="page-header">
+	<div class="container">
+		<h1><code>&lt;nav&gt;</code></h1>
+		<nav>
+			<code>&lt;nav&gt;</code>
+			<div class="nav-links-container">
+				<a href="#kratko">Кратко</a>
+				|
+				<a href="#primer">Пример</a>
+				|
+				<a href="#kak-ponyat">Как понять</a>
+				|
+				<a href="#kak-pishetsya">Как пишется</a>
+				|
+				<a href="#atributy">Атрибуты</a>
+				|
+				<a href="#podskazki">Подсказки</a>
+			</div>
+			<code>&lt;/nav&gt;</code>
+		</nav>
+		<button id="theme-changer" onclick="toggleTheme()">toggle theme</button>
+	</div>
+</header>
+<div class="container">
+	<main >
+		<p>Удобный тег, объединяющий элементы навигации по сайту. </p>
+		<section>
+			<h2 id="kratko">Кратко</h2>
+			<p>В контейнере <code>&lt;nav&gt;</code> можно собрать ссылки для навигации по сайту.</p>
+		</section>
+		<section>
+			<h2 id="primer">Пример</h2>
+			<p>
+				Вот так выглядит простой блок <code>&lt;nav&gt;</code> со ссылками на разные разделы сайта.
+				Мы использовали его с тегом <code>&lt;ul&gt;</code>,
+				поскольку элементы меню однотипные по смыслу и связаны между собой:
+			</p>
+			<pre><code>&lt;nav class="menu"&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Главная&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;О нас&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Контакты&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+		</section>
+		<section>
+			<h2 id="kak-ponyat">Как понять</h2>
+			<p>В контейнер <code>&lt;nav&gt;</code> помещаются основные ссылки, по которым пользователь сможет быстро перейти на нужный раздел сайта.</p>
+		</section>
+		<section>
+			<h2 id="kak-pishetsya">Как пишется</h2>
+			<p>тег <code>&lt;nav&gt;</code> парный, всегда нужно закрывать <code>&lt;/nav&gt;</code>.
+			
+			На странице можно использовать несколько <code>&lt;nav&gt;</code>.</p>
+		</section>
+		<section>
+			<h2 id="atributy">Атрибуты</h2>
+			<p>У <code>&lt;nav&gt;</code> нет уникальных атрибутов, применяются все глобальные атрибуты.</p>
+		</section>
+		<section>
+			<h2 id="podskazki">Подсказки</h2>
+			<p>
+				<code>&lt;nav&gt;</code> — это один из ориентиров (landmark), которые скринридеры могут использовать для
+				навигации по странице. То есть можно перейти прямо в блок навигации по сайту, это очень удобно.
+			</p>
+		</section>
+	</main>
+</div>
+</body>
+</html>

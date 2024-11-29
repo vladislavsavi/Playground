@@ -43,6 +43,43 @@
 	</div>
 </header>
 <main class="container">
+	<h2>Кратко</h2>
+	<p>Семантический тег-обёртка для блока с поиском или фильтром.</p>
+	<h2>Пример</h2>
+	<pre><code>&lt;search&gt;
+	  &lt;form&gt;
+	   &lt;input type="search"&gt;
+	   &lt;button&gt;Поиск&lt;/button&gt;
+	  &lt;/form&gt;
+&lt;/search&gt;</code></pre>
+	<h2>Как понять</h2>
+	<p>Этот семантический тег пришёл на замену ARIA-атрибуту role="search". Им можно обернуть форму с поиском или блок на странице с результатами фильтрации.</p>
+	<p>Как было раньше</p>
+	<pre><code>&lt;form role="search"&gt;
+&lt;/form&gt;</code></pre>
+	<p>Как будет теперь</p>
+	Вот преобразованный код в требуемом формате:
+	
+	<pre><code>&lt;search&gt;
+	    &lt;form&gt;
+	    &lt;/form&gt;
+&lt;/search&gt;</code></pre>
+	<p>или</p>
+	<pre><code>&lt;search&gt;
+	 &lt;h4&gt;
+	  Поиск по фильтрам
+	 &lt;/h4&gt;
+	 &lt;form&gt;
+	  &lt;label&gt;
+	   цвет
+	   &lt;select name="color"&gt;
+	    &lt;option value="red"&gt;Красный&lt;/option&gt;
+	    &lt;option value="green"&gt;Зелёный&lt;/option&gt;
+	    &lt;option value="blue"&gt;Синий&lt;/option&gt;
+	   &lt;/select&gt;
+	  &lt;/label&gt;
+	 &lt;/form&gt;
+&lt;/search&gt;</code></pre>
 
 </main>
 </body>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Savin Vladislav">
+	<meta name="description" content="Краткое описание страницы"/>
+	<meta name="keywords" content="ключевое слово 1, ключевое слово 2, ключевое слово 3">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.2, user-scalable=no"/>
+	<link rel="shortcut icon" type="image/svg+xml" href="../../../assets/images/favicon.svg"/>
+	<link rel="stylesheet" href="../../../assets/styles/main.css">
+	<link rel="stylesheet" href="../../../assets/styles/container.css">
+	<script defer src="../../../assets/scripts/main.js"></script>
+	<title>Семантика &lt;time&gt;</title>
+	<style>
+		code {
+			background-color: var(--main-background-color);
+			border: 1px solid var(--border-color);
+			padding: 4px;
+			border-radius: 4px;
+		}
+		
+		section {
+			margin-top: 24px;
+		}
+		
+		article {
+			background-color: var(--main-background-color);
+			border: 1px solid var(--border-color);
+			padding: 16px;
+			border-radius: 8px;
+		}
+		.grid-layout {
+			display: grid;
+			grid-template-columns: 1fr  1fr;
+		}
+	</style>
+</head>
+<body>
+<header class="page-header">
+	<div class="container">
+		<h1><code>&lt;time&gt;</code></h1>
+		<button id="theme-changer" onclick="toggleTheme()">toggle theme</button>
+	</div>
+</header>
+<main class="container">
+	<section>
+		<h2>Кратко</h2>
+		Элемент <code>&lt;time&gt;</code> служит для разметки дат, времени или периода времени: в содержимое тега идёт
+		формат для человека, а в атрибут <code>datetime</code> версия для машин — поисковому роботу точно понравится 🙂
+	</section>
+	
+	<section>
+		<h2>Пример</h2>
+		<p>Так можно указать конкретную дату:</p>
+		<code>&lt;<span style="color: #ff5d5d">time</span> datetime="2021-10-12"&gt;12 октября 2021&lt;/<span style="color: #ff5d5d">time</span> datetime="2021-10-12"&gt;</code>
+		
+		<p>Добавим время и зону:</p>
+		<pre><code>Челябинский метеорит вошёл в земную атмосферу
+ &lt;time datetime="2013-02-15T09:20+06:00"&gt;
+  15 февраля 2013 около 09:20
+ &lt;/time&gt;
+</code></pre>
+		<p>А так можно указать временной интервал:</p>
+		<pre><code>Самый длинный клип Twenty One Pilots на песню Level of Concern длится
+ &lt;time datetime="117d 16h 10m 25s"&gt;
+  177 дней, 16 часов, 10 минут и 25 секунд
+ &lt;/time&gt;
+</code></pre>
+	</section>
+</main>
+</body>
+</html>

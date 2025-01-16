@@ -18,7 +18,8 @@
 		<button id="theme-changer" onclick="toggleTheme()">toggle theme</button>
 	</div>
 </header>
-<div class="container block">
+<div class="container flow-root block">
+	<h1>C display: flow-root;</h1>
 	<img src="https://picsum.photos/200/300" alt="my image" class="float-right" height="100px" width="100px"/>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores fugit,
@@ -33,10 +34,14 @@
 		consequuntur molestias similique beatae aliquid adipisci eius modi autem
 		amet nam aut delectus nemo aperiam nulla id sapiente quis
 		exercitationem.
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores fugit,
-		consequuntur molestias similique beatae aliquid adipisci eius modi autem
-		amet nam aut delectus nemo aperiam nulla id sapiente quis
-		exercitationem.
+	</p>
+	<img src="https://picsum.photos/200/300" alt="my image" class="float-left" height="100px" width="100px"/>
+</div>
+
+<div style="margin-bottom: 200px" class="container block">
+	<h1>Без display: flow-root;</h1>
+	<img src="https://picsum.photos/200/300" alt="my image" class="float-right" height="100px" width="100px"/>
+	<p>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores fugit,
 		consequuntur molestias similique beatae aliquid adipisci eius modi autem
 		amet nam aut delectus nemo aperiam nulla id sapiente quis
@@ -46,10 +51,6 @@
 		amet nam aut delectus nemo aperiam nulla id sapiente quis
 		exercitationem.
 		LLorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores fugit,
-		consequuntur molestias similique beatae aliquid adipisci eius modi autem
-		amet nam aut delectus nemo aperiam nulla id sapiente quis
-		exercitationem.
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores fugit,
 		consequuntur molestias similique beatae aliquid adipisci eius modi autem
 		amet nam aut delectus nemo aperiam nulla id sapiente quis
 		exercitationem.
@@ -64,10 +65,14 @@
 		display: table;
 	}
 	
+	.flow-root {
+		display: flow-root;
+	}
+	
 	.block {
 		padding: 16px;
 		margin-top: 20px;
-		display: flow-root;
+		
 		border: 5px solid var(--border-color);
 	}
 	
